@@ -1,0 +1,122 @@
+.contentView {
+	width: 1280px;
+	margin: 0 auto;
+	margin-top: 5px;
+	text-align: center;
+}
+
+.contentView ul {
+	width: 300px;
+	display: inline-block;
+	position: relative;
+}
+
+.contentView ul li a {
+	margin-right: -1.5em;
+	
+}
+
+.contentView ul li a div {
+	height: 200px;
+	background-repeat: no-repeat;
+
+	background-size: cover;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+}
+
+.contentView div.imgView, .contentView div.descView {
+	display: inline-block;
+	position: relative;
+	float: left;
+}
+
+.contentView div.imgView {
+	width: 30%;
+}
+
+.contentView div.imgView div.preview, .contentView div.imgView div.preview img {
+	width: 100%;
+	margin-bottom: 2px;
+}
+
+.contentView div.imgView div.preview {
+	position: relative;
+}
+
+.contentView div.imgView div.preview img {
+	left: 0;
+	position: absolute;
+
+	-webkit-transition: opacity 1s ease-in-out;
+	-moz-transition: opacity 1s ease-in-out;
+	-o-transition: opacity 1s ease-in-out;
+	transition: opacity 1s ease-in-out;
+	opacity:0;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+}
+
+.contentView div.imgView div.preview img.opaque {
+	opacity:1;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=1);
+}
+
+.contentView div.imgView div#thumb span img {
+	width: 100%;
+}
+
+.ui-block-a, .ui-block-b, .ui-block-c, .ui-block-d {
+	padding-right: 3px;
+}
+
+.contentView div.descView {
+	width: 70%;
+	text-align: left;
+}
+
+.contentView div.descView div {
+	margin-left: 10px;
+	padding-right: 15px;
+	padding-left: 15px;
+	border: 1px solid #000;
+	border-radius: 10px;
+}
+
+.contentView div.descView div.countdown {
+	font-size: 25px;
+	font-weight: bold;
+	padding: 10px;
+}
+
+.contentView div.descView div.product, .contentView div.descView div.store {
+	margin-top: 10px;
+}
+
+@media screen and (max-width: 1300px) {
+	.contentView {
+		width: auto;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.contentView div.imgView {
+		width: 45%;
+	}
+
+	.contentView div.descView {
+		width: 55%;
+	}
+}
+
+@media screen and (max-width: 960px) {
+	.contentView div.imgView, .contentView div.descView, .contentView div.preview img {
+		width: 100%;
+	}
+
+	.contentView div.descView div {
+		margin-left: 0;
+		margin-top: 10px;
+	}
+}
