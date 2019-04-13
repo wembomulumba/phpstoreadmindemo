@@ -1,0 +1,22 @@
+#logo
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 80%;
+}
+
+body
+{
+    background: url('1.jpg') !important;
+    background-repeat:repeat-y !important;
+    background-position:center center !important;
+    background-attachment:scroll !important;
+    background-size:100% 100% !important;
+}
+
+.ui-page .ui-body-c .ui-page-active .ui-overlay-c .ui-mobile-viewport
+{
+    background: transparent !important;
+}
