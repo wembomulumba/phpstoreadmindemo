@@ -11,7 +11,7 @@ include ('../include/connect.php');
 			window.location='index.php';
 		</script>";
 	}
-
+// get the product id on url
 $id_product = $_GET['id_product'];
 $dbStore = mysql_query("SELECT id_store, store_name, store_address, store_phone, store_web from tbl_store");
 $dbCat = mysql_query("SELECT id_product_categories, title_product_categories, categories_logo from tbl_product_categories ORDER BY title_product_categories ASC");
@@ -38,6 +38,7 @@ function edit_product(){
     $idProduct = $_POST['idProduct'];
     $image_primary = $_POST['image_primary_send'];
     
+	// checking of the image is empty
     if (empty($imagePrimary))
 	{
 			$query = "UPDATE tbl_product SET id_product_categories='$idCat', product_name='$proName', price='$proPrice', discount='$proDisc', product_desc='$proDesc', id_store='$idStore', product_url='$proUrl', date_product='$proTime', last_date_product_ex='$proTimeEx' WHERE id_product='$idProduct'";
