@@ -8,6 +8,7 @@
 
 	$checkLogin = mysql_query("SELECT user_admin, md5_admin FROM tbl_admin WHERE user_admin='". $username ."' AND md5_admin='". $md5Pwd ."'");
 
+	// counting the numbers of rows
 	$rowCount = mysql_num_rows($checkLogin);
 
 	if ($rowCount > 0) {
